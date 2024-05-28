@@ -1,4 +1,4 @@
-// Notifications.js
+
 import React from 'react';
 
 function Notifications({ notifications }) {
