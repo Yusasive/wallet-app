@@ -19,18 +19,18 @@ app.post('/api/wallets/create', async (req, res) => {
     // Authenticate the user (replace with your authentication method)
     const userToken = req.headers.authorization; // Example: Bearer <user_token>
 
-    // Call the Circle API to create a new wallet
+   
     const response = await axios.post(
       'https://api-sandbox.circle.com/v1/wallets',
       {
         name: req.body.name,
-        type: 'personal', // Specify wallet type (e.g., business, personal)
+        type: 'personal', 
       },
       {
         headers: {
           Authorization: `Bearer ${process.env.CIRCLE_API_KEY}`,
           'Content-Type': 'application/json',
-          'Client-Id': 'your-client-id', // Replace with your Circle client ID
+          'Client-Id': 'your-client-id', 
         },
       }
     );
