@@ -1,4 +1,4 @@
-// App.js
+
 import React from 'react';
 import { WalletCreation, WalletTransfers, WalletRecovery, Notifications, Contacts } from './components';
 
