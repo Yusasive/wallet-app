@@ -5,19 +5,14 @@ function Contacts() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    // Initialize Circle SDK with your API key
+   
     const circle = new Circle({ apiKey: 'YOUR_API_KEY' });
 
-    // Fetch the user's contacts
     const fetchContacts = async () => {
       try {
-        // Authenticate the user (replace with your authentication method)
         const userToken = 'USER_AUTHENTICATION_TOKEN';
 
-        // Call the SDK method to fetch contacts
         const fetchedContacts = await circle.fetchContacts(userToken);
-
-        // Update state with fetched contacts
         setContacts(fetchedContacts);
       } catch (error) {
         console.error('Error fetching contacts:', error);
