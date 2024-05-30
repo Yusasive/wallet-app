@@ -7,23 +7,19 @@ function WalletCreation() {
 
   const handleCreateWallet = async (e) => {
     e.preventDefault();
-    
-    // Initialize Circle SDK with your API key
+
     const circle = new Circle({ apiKey: 'YOUR_API_KEY' });
     
     try {
-      // Authenticate the user (replace with your authentication method)
       const userToken = 'USER_AUTHENTICATION_TOKEN';
 
-      // Call the SDK method to create a new wallet
       const wallet = await circle.createWallet(userToken, { name, email });
       
       console.log('Wallet created:', wallet);
-      
-      // Optionally, handle successful wallet creation (e.g., display success message)
+ 
     } catch (error) {
       console.error('Error creating wallet:', error);
-      // Optionally, handle error (e.g., display error message)
+
     }
   };
 
