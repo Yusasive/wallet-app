@@ -7,22 +7,19 @@ function WalletRecovery() {
   const handleRecoverWallet = async (e) => {
     e.preventDefault();
 
-    // Initialize Circle SDK with your API key
     const circle = new Circle({ apiKey: 'YOUR_API_KEY' });
 
     try {
-      // Authenticate the user (replace with your authentication method)
+
       const userToken = 'USER_AUTHENTICATION_TOKEN';
 
-      // Call the SDK method to recover the wallet
+
       const wallet = await circle.recoverWallet(userToken, { email });
 
       console.log('Wallet recovered:', wallet);
 
-      // Optionally, handle successful wallet recovery (e.g., display success message)
     } catch (error) {
       console.error('Error recovering wallet:', error);
-      // Optionally, handle error (e.g., display error message)
     }
   };
 
