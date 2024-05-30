@@ -8,22 +8,18 @@ function WalletTransfers() {
   const handleTransfer = async (e) => {
     e.preventDefault();
 
-    // Initialize Circle SDK with your API key
     const circle = new Circle({ apiKey: 'YOUR_API_KEY' });
 
     try {
-      // Authenticate the user (replace with your authentication method)
       const userToken = 'USER_AUTHENTICATION_TOKEN';
 
-      // Call the SDK method to transfer tokens
       const transferResult = await circle.transfer(userToken, recipient, amount);
       
       console.log('Transfer result:', transferResult);
-      
-      // Optionally, handle successful transfer (e.g., display success message)
+  
     } catch (error) {
       console.error('Error transferring tokens:', error);
-      // Optionally, handle error (e.g., display error message)
+
     }
   };
 
