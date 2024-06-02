@@ -1,4 +1,3 @@
-// components/index.js
 export { default as WalletCreation } from './WalletCreation';
 export { default as WalletTransfers } from './WalletTransfers';
 export { default as WalletRecovery } from './WalletRecovery';
